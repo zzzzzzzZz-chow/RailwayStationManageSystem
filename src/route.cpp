@@ -12,7 +12,6 @@ BaseRoute::BaseRoute(Stations stations) {
     _route.push_back(i);
 }
 
-StationIterator BaseRoute::begin() const { return _route.begin(); }
-StationIterator BaseRoute::end() const { return _route.end(); }
+BaseRoute::Iterators BaseRoute::iterators() const { return _route; }
 
 } // namespace station_system

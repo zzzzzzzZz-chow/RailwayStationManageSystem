@@ -13,10 +13,11 @@ using Route = shared_ptr<BaseRoute>;
 Route route(Stations);
 
 class BaseRoute {
+  using Iterators = vector<Station>;
+
 public:
   BaseRoute(Stations);
-  StationIterator begin() const;
-  StationIterator end() const;
+  Iterators iterators() const;
 
 private:
   vector<Station> _route;
