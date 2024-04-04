@@ -16,7 +16,6 @@ public:
   BaseTime(const string_view time);
 
 public:
-  string_view time();
   const string_view time() const;
   void time(const string_view new_time);
 
