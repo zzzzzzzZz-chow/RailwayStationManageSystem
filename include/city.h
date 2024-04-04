@@ -15,7 +15,6 @@ public:
   BaseCity(string_view city_name);
 
 public:
-  string_view name();
   const string_view name() const;
   void name(const string_view new_name);
 
