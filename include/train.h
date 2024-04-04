@@ -15,9 +15,11 @@ public:
   void code(const string_view);
   const Route route() const;
   void route(const Route);
+  void save(ostream &);
+  void load(istream &);
 
 private:
-  string_view _code;
+  string _code;
   Route _route;
 };
 

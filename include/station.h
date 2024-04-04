@@ -19,6 +19,8 @@ public:
   void city(const City);
   const Time time() const;
   void time(const Time);
+  void save(ostream &);
+  void load(istream &);
 
 private:
   City _city;

@@ -1,6 +1,8 @@
 #pragma once
 
+#include <istream>
 #include <memory>
+#include <ostream>
 #include <string_view>
 
 namespace station_system {
@@ -17,9 +19,11 @@ public:
 public:
   const string_view name() const;
   void name(const string_view new_name);
+  void save(ostream &);
+  void load(istream &);
 
 private:
-  string_view _city_name;
+  string _city_name;
 };
 
 } // namespace station_system

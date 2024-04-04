@@ -18,6 +18,8 @@ class BaseRoute {
 public:
   BaseRoute(Stations);
   Iterators iterators() const;
+  void save(ostream &);
+  void load(istream &);
 
 private:
   vector<Station> _route;

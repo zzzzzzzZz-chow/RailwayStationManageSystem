@@ -14,4 +14,19 @@ BaseRoute::BaseRoute(Stations stations) {
 
 BaseRoute::Iterators BaseRoute::iterators() const { return _route; }
 
+void BaseRoute::save(ostream &os) {
+  os << _route.size() << '\t';
+  for (auto &i : _route)
+    i->save(os);
+}
+void BaseRoute::load(istream &is) {
+  size_t n;
+  is >> n;
+  for (int i = 0; i < n; ++i) {
+    auto s = station(city(""), time(""));
+    s->load(is);
+    _route.push_back(s);
+  }
+}
+
 } // namespace station_system

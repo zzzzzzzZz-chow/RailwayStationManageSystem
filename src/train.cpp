@@ -18,4 +18,14 @@ const Route BaseTrain::route() const { return _route; }
 
 void BaseTrain::route(const Route route) { _route = route; }
 
+void BaseTrain::save(ostream &os) {
+  os << _code << '\t';
+  _route->save(os);
+}
+
+void BaseTrain::load(istream &is) {
+  is >> _code;
+  _route->load(is);
+}
+
 } // namespace station_system
