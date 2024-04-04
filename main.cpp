@@ -1,12 +1,9 @@
-#include "include/city.h"
-#include "include/time.h"
+#include "include/station.h"
 #include <iostream>
 
 int main() {
   using namespace station_system;
-  auto s = city("what");
-  std::cout << s->name() << '\n';
-  std::cout << s->name() << '\n';
-  Time t = time("3:19");
-  std::cout << t->time() << '\n';
+  auto s = station(city("武汉"), time("15:00"));
+  std::cout << s->city()->name() << '\n';
+  std::cout << s->time()->time() << '\n';
 }

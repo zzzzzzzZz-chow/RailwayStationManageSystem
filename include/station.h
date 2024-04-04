@@ -14,6 +14,12 @@ class BaseStation {
 public:
   BaseStation(const City, const Time);
 
+public:
+  const City city() const;
+  void city(const City);
+  const Time time() const;
+  void time(const Time);
+
 private:
   City _city;
   Time _time;
