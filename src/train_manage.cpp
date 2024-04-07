@@ -5,6 +5,10 @@
 namespace station_system {
 using namespace std;
 
+TrainManage train_manage(Trains trains) {
+  return make_shared<BaseTrainManage>(trains);
+}
+
 BaseTrainManage::BaseTrainManage(Trains trains) { _trains = std::move(trains); }
 
 void BaseTrainManage::save(ostream &os) {
@@ -23,6 +27,18 @@ void BaseTrainManage::load(istream &is) {
   }
   sort(_trains.begin(), _trains.end(),
        [](const Train &r, const Train &l) { return r->code() < l->code(); });
+}
+
+Trains BaseTrainManage::search(string_view prefix) {
+  auto begin_pos =
+      find_if(_trains.begin(), _trains.end(), [prefix](const Train &train) {
+        return 0 == train->code().find(prefix);
+      });
+  auto end_pos =
+      find_if(begin_pos, _trains.end(), [prefix](const Train &train) {
+        return -1 == train->code().find(prefix);
+      });
+  return {begin_pos, end_pos};
 }
 
 } // namespace station_system

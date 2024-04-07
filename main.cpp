@@ -7,9 +7,6 @@ int main() {
   fstream fs{"test.data", ios::in};
   auto t = make_shared<BaseTrainManage>();
   t->load(fs);
-  t->save(cout);
-  fs.close();
-  fs.open("test.data", ios::out);
-  t->save(fs);
-  fs.close();
+  auto t1 = make_shared<BaseTrainManage>(t->search("K1"));
+  t1->save(cout);
 }
