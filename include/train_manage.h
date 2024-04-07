@@ -12,6 +12,7 @@ public:
   BaseTrainManage(Trains = {});
   void save(ostream &);
   void load(istream &);
+  Trains search(string_view);
 
 private:
   Trains _trains;

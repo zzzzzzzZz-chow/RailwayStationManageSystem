@@ -4,8 +4,9 @@
 
 int main() {
   using namespace station_system;
-  ifstream ifs{"test.data"};
+  fstream fs{"test.data", ios::in | ios::out};
   auto t = make_shared<BaseTrainManage>();
-  t->load(ifs);
+  t->load(fs);
   t->save(cout);
+  t->save(fs);
 }

@@ -1,4 +1,5 @@
 #include "../include/train_manage.h"
+#include <algorithm>
 #include <utility>
 
 namespace station_system {
@@ -20,6 +21,8 @@ void BaseTrainManage::load(istream &is) {
     tmp->load(is);
     _trains.push_back(tmp);
   }
+  sort(_trains.begin(), _trains.end(),
+       [](const Train &r, const Train &l) { return r->code() < l->code(); });
 }
 
 } // namespace station_system
