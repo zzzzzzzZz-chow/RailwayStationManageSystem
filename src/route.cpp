@@ -23,7 +23,7 @@ void BaseRoute::load(istream &is) {
   size_t n;
   is >> n;
   for (int i = 0; i < n; ++i) {
-    auto s = station(city(""), time(""));
+    auto s = station(city(""), time(""), time(""));
     s->load(is);
     _route.push_back(s);
   }
