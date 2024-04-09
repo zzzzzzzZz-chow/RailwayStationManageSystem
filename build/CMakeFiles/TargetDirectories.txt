@@ -1,0 +1,3 @@
+/home/zyx/cpp/wsx/RailwayStationManageSystem/build/CMakeFiles/lib.dir
+/home/zyx/cpp/wsx/RailwayStationManageSystem/build/CMakeFiles/edit_cache.dir
+/home/zyx/cpp/wsx/RailwayStationManageSystem/build/CMakeFiles/rebuild_cache.dir

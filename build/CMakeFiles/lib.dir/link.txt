@@ -1,0 +1,2 @@
+/usr/sbin/ar qc liblib.a CMakeFiles/lib.dir/src/city.cpp.o CMakeFiles/lib.dir/src/station.cpp.o CMakeFiles/lib.dir/src/train.cpp.o CMakeFiles/lib.dir/src/route.cpp.o CMakeFiles/lib.dir/src/time.cpp.o CMakeFiles/lib.dir/src/train_manage.cpp.o
+/usr/sbin/ranlib liblib.a

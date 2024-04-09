@@ -41,4 +41,6 @@ Trains BaseTrainManage::search(string_view prefix) {
   return {begin_pos, end_pos};
 }
 
+Trains BaseTrainManage::trains() { return _trains; }
+
 } // namespace station_system

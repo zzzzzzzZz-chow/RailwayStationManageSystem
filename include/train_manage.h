@@ -17,6 +17,7 @@ public:
   void save(ostream &);
   void load(istream &);
   Trains search(string_view);
+  Trains trains();
 
 private:
   Trains _trains;
