@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../include/city.h"
-#include "../include/time.h"
+#include "./city.h"
+#include "./time.h"
 
 namespace station_system {
 using namespace std;

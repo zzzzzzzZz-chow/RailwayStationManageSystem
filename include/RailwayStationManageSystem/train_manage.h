@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../include/train.h"
+#include "./train.h"
 #include <memory>
 
 namespace station_system {

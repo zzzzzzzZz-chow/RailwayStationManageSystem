@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../include/station.h"
+#include "./station.h"
 #include <vector>
 
 namespace station_system {

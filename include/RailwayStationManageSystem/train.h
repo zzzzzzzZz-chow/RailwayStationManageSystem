@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../include/route.h"
+#include "./route.h"
 
 namespace station_system {
 
